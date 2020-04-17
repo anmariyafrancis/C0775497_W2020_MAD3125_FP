@@ -50,6 +50,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             im.hideSoftInputFromWindow(txtEmail.getWindowToken(),0);
             emailId=txtEmail.getText().toString();
             password=txtPassword.getText().toString();
+            if(checkRemember.isChecked()){
+                loginPrefEditor.putBoolean("rememberMe",true);
+                loginPrefEditor.putString("emailId",emailId);
+                loginPrefEditor.putString("password",password);
+            }
 
         }
 
