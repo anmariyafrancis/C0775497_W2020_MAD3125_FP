@@ -54,8 +54,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 loginPrefEditor.putBoolean("rememberMe",true);
                 loginPrefEditor.putString("emailId",emailId);
                 loginPrefEditor.putString("password",password);
+                loginPrefEditor.commit();
             }
-
+            else {
+                loginPrefEditor.clear();
+                loginPrefEditor.commit();
+            }
         }
 
     }
