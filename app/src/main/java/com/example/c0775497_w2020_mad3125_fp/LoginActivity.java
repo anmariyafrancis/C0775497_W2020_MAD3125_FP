@@ -3,6 +3,7 @@ package com.example.c0775497_w2020_mad3125_fp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.hardware.input.InputManager;
 import android.os.Bundle;
@@ -60,7 +61,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 loginPrefEditor.clear();
                 loginPrefEditor.commit();
             }
+            goNext();
         }
 
+    }
+
+    private void goNext() {
+        if(txtEmail.getText().toString().equals("anmariya@gmail.com")&&(txtPassword.getText().toString().equals("an123")));
+        startActivity(new Intent(LoginActivity.this,));
     }
 }
