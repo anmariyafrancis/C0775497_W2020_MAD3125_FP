@@ -67,7 +67,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void goNext() {
-        if(txtEmail.getText().toString().equals("anmariya@gmail.com")&&(txtPassword.getText().toString().equals("an123")));
-        startActivity(new Intent(LoginActivity.this,));
+        if(txtEmail.getText().toString().equals("anmariya@gmail.com")&&(txtPassword.getText().toString().equals("an123"))){
+        startActivity(new Intent(LoginActivity.this,CustomerListActivity.class));
+        LoginActivity.this.finish();
+    }
+    else{
+
     }
 }
