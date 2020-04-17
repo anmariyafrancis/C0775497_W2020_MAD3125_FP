@@ -38,6 +38,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if(rememberMe==true){
             txtEmail.setText(loginPreferences.getString("emailId",""));
             txtPassword.setText(loginPreferences.getString("password",""));
+            checkRemember.setChecked(true);
         }
     }
 
