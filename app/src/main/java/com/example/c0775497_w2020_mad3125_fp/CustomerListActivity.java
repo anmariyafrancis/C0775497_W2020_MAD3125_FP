@@ -6,8 +6,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class CustomerListActivity extends AppCompatActivity {
 
@@ -31,6 +34,16 @@ public class CustomerListActivity extends AppCompatActivity {
         rvCustomerList.setAdapter(customerAdapter);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.mymenu,menu);
+        return true;
+    }
     private void populateCustomers() {
+        DataSingelton.getInstance().populateData();
+        customers=new ArrayList();
+        HashMap<String,Customer> customerHashMap=Data
+
     }
 }
