@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C6FFEB3B"
@@ -9,15 +13,57 @@
 
     <TextView
         android:id="@+id/txtAddNew"
-        android:layout_width="230dp"
-        android:layout_height="31dp"
-        android:layout_marginEnd="107dp"
-        android:layout_marginStart="100dp"
+        android:layout_width="228dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:text="Add New Customer"
+        android:textColor="#020202"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtxtId"
+        android:layout_width="328dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="35dp"
+        android:drawableLeft="@drawable/id"
+        android:ems="10"
+        android:hint="Enter Customer ID"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAddNew" />
+
+    <EditText
+        android:id="@+id/edtxtFirstName"
+        android:layout_width="327dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="13dp"
+        android:drawableLeft="@drawable/user"
+        android:ems="10"
+        android:hint="Enter First Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxtId" />
+
+    <EditText
+        android:id="@+id/edtxtLastName"
+        android:layout_width="330dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="12dp"
+        android:drawableLeft="@drawable/user"
+        android:ems="10"
+        android:hint="Enter Last Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxtFirstName" />
 </androidx.constraintlayout.widget.ConstraintLayout>
