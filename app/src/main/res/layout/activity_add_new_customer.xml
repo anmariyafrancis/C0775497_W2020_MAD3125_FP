@@ -9,7 +9,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C6FFEB3B"
-    tools:context=".AddNewCustomer">
+    tools:context=".activity.AddNewCustomerActivity">
 
     <TextView
         android:id="@+id/txtAddNew"

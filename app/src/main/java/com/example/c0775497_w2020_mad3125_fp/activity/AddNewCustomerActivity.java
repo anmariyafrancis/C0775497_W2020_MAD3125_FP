@@ -1,4 +1,4 @@
-package com.example.c0775497_w2020_mad3125_fp;
+package com.example.c0775497_w2020_mad3125_fp.activity;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,9 +14,13 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
+import com.example.c0775497_w2020_mad3125_fp.model.Customer;
+import com.example.c0775497_w2020_mad3125_fp.DataSingelton;
+import com.example.c0775497_w2020_mad3125_fp.R;
+
 import java.util.Calendar;
 
-public class AddNewCustomer extends AppCompatActivity {
+public class AddNewCustomerActivity extends AppCompatActivity {
 
     private EditText edtxtId,edtxtFirstName,edtxtLastName,edtxtBirth;
     private RadioButton rdBtnMale,rdBtnFemale,rdBtnOther;
@@ -115,7 +119,7 @@ public class AddNewCustomer extends AppCompatActivity {
             if(getGender().equals("Female")){
                 Customer customer=new Customer(edtxtId.getText().toString(),edtxtFirstName.getText().toString(),edtxtLastName.getText().toString(),getGender(),edtxtEmail.getText().toString(),edtxtUserName.getText().toString(),edtxtPassword.getText().toString(),edtxtAdress.getText().toString(),edtxtBirth.getText().toString());
                DataSingelton.getInstance().getCustomerMap().put(Customer.getCustomerId(),customer);
-                Intent mIntent = new Intent(AddNewCustomer.this, CustomerListActivity.class);
+                Intent mIntent = new Intent(AddNewCustomerActivity.this, CustomerListActivity.class);
                 mIntent.putExtra("Customer", customer);
                 startActivity(mIntent);
             }
@@ -161,7 +165,7 @@ public class AddNewCustomer extends AppCompatActivity {
                 int month=cal.get(Calendar.MONTH);
                 int day=cal.get(Calendar.DAY_OF_MONTH);
 
-                DatePickerDialog dialog=new DatePickerDialog(AddNewCustomer.this,
+                DatePickerDialog dialog=new DatePickerDialog(AddNewCustomerActivity.this,
                         android.R.style.Theme_Holo_Light_Dialog_MinWidth,
                         mDateSetListener,
                         year, month, day);

@@ -1,4 +1,6 @@
-package com.example.c0775497_w2020_mad3125_fp;
+package com.example.c0775497_w2020_mad3125_fp.model;
+
+import com.example.c0775497_w2020_mad3125_fp.model.Bill;
 
 public class Mobile extends Bill {
     private String manufacturerName;

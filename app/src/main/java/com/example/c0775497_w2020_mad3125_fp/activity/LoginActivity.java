@@ -1,11 +1,10 @@
-package com.example.c0775497_w2020_mad3125_fp;
+package com.example.c0775497_w2020_mad3125_fp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.hardware.input.InputManager;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -13,7 +12,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
-import javax.microedition.khronos.egl.EGLDisplay;
+import com.example.c0775497_w2020_mad3125_fp.R;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -68,7 +67,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void goNext() {
         if(txtEmail.getText().toString().equals("anmariya@gmail.com")&&(txtPassword.getText().toString().equals("an123"))){
-        startActivity(new Intent(LoginActivity.this,CustomerListActivity.class));
+        startActivity(new Intent(LoginActivity.this, CustomerListActivity.class));
         LoginActivity.this.finish();
     }
     else{

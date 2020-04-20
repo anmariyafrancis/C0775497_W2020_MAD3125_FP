@@ -1,4 +1,4 @@
-package com.example.c0775497_w2020_mad3125_fp;
+package com.example.c0775497_w2020_mad3125_fp.activity;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,6 +8,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+
+import com.example.c0775497_w2020_mad3125_fp.model.Customer;
+import com.example.c0775497_w2020_mad3125_fp.adapter.CustomerAdapter;
+import com.example.c0775497_w2020_mad3125_fp.DataSingelton;
+import com.example.c0775497_w2020_mad3125_fp.R;
 
 import java.util.ArrayList;
 import java.util.Collection;

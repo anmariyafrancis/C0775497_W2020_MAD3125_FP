@@ -1,6 +1,8 @@
-package com.example.c0775497_w2020_mad3125_fp;
+package com.example.c0775497_w2020_mad3125_fp.adapter;
 
 import android.view.ViewGroup;
+
+import com.example.c0775497_w2020_mad3125_fp.model.Customer;
 
 import java.util.ArrayList;
 

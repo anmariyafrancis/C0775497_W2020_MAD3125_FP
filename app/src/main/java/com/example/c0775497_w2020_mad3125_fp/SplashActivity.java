@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.example.c0775497_w2020_mad3125_fp.activity.LoginActivity;
+
 public class SplashActivity extends AppCompatActivity {
 
     private static int SPLASH_TIME_OUT=5000;
@@ -16,7 +18,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i=new Intent(SplashActivity.this,LoginActivity.class);
+                Intent i=new Intent(SplashActivity.this, LoginActivity.class);
                 startActivity(i);
                 finish();
             }

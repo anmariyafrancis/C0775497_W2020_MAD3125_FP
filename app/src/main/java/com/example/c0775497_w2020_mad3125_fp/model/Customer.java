@@ -1,11 +1,9 @@
-package com.example.c0775497_w2020_mad3125_fp;
+package com.example.c0775497_w2020_mad3125_fp.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.security.PublicKey;
 import java.util.ArrayList;
-import java.util.BitSet;
 import java.util.Collection;
 import java.util.HashMap;
 
@@ -48,7 +46,7 @@ public class Customer implements Parcelable {
         public Customer[] newArray(int size){return new Customer[size];}
     };
     public int getCustomerImage(){return customerImage;}
-    public Customer(String customerId,String firstName,String lastName,String gender,String email,String userName,String password,String address,String birthDate,Integer customerImage){
+    public Customer(String customerId, String firstName, String lastName, String gender, String email, String userName, String password, String address, String birthDate){
     this.customerId=customerId;
     this.firstName=firstName;
     this.lastName=lastName;

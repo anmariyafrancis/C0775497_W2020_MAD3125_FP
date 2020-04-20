@@ -1,8 +1,8 @@
-package com.example.c0775497_w2020_mad3125_fp;
+package com.example.c0775497_w2020_mad3125_fp.model;
 
 import java.io.Serializable;
 
-public class Bill implements Serializable {
+public abstract class Bill implements Serializable {
     public enum BillType{
         Hydro,
         Internet,
