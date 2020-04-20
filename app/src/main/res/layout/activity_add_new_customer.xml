@@ -66,4 +66,62 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtxtFirstName" />
+
+    <EditText
+        android:id="@+id/edtxtBirth"
+        android:layout_width="330dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="11dp"
+        android:drawableLeft="@drawable/calendar"
+        android:ems="10"
+        android:hint="Select BirthDate"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxtLastName" />
+
+    <RadioGroup
+        android:id="@+id/rdGender"
+        android:layout_width="325dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxtBirth">
+
+        <RadioButton
+            android:id="@+id/rdBtnMale"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/rdBtnFemale"
+            android:layout_width="95dp"
+            android:layout_height="28dp"
+            android:text="Female" />
+
+        <RadioButton
+            android:id="@+id/rdBtnOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Other" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/edtxtUserName"
+        android:layout_width="325dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="14dp"
+        android:drawableLeft="@drawable/edit"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter User Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rdGender" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
