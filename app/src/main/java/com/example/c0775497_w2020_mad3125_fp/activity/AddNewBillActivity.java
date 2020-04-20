@@ -36,8 +36,8 @@ public class AddNewBillActivity extends AppCompatActivity {
         ActionBar mActionBar = getSupportActionBar();
         mActionBar.hide();
 
-        edtBillId = findViewById(R.id.edtBillId);
-        edtNumber = findViewById(R.id.edtNumber);
+        /*edtBillId = findViewById(R.id.edBillId);
+        edtNumber = findViewById(R.id.editText);
         edtBillDate = findViewById(R.id.edtBillDate);
         edtDataUsed = findViewById(R.id.edtDataUsed);
         edtMinsUsed = findViewById(R.id.edtMinsUsed);
@@ -57,7 +57,7 @@ public class AddNewBillActivity extends AppCompatActivity {
         spnBillType = findViewById(R.id.spnBillType);
 
         btnBillAdd = findViewById(R.id.btnBillAdd);
-        btnBillClear = findViewById(R.id.btnBillClear);
+        btnBillClear = findViewById(R.id.btnBillClear);*/
 
         Intent mIntent = getIntent();
         custObj = mIntent.getParcelableExtra("CustomerBills2");
@@ -72,7 +72,7 @@ public class AddNewBillActivity extends AppCompatActivity {
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spnBillType.setAdapter(dataAdapter);
 
-        spnBillType.setOnItemSelectedListener(this);
+        spnBillType.setOnItemSelectedListener();
 
         btnBillClear.setOnClickListener(new View.OnClickListener() {
             @Override
