@@ -1,8 +1,10 @@
 package com.example.c0775497_w2020_mad3125_fp;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -32,6 +34,25 @@ public class AddNewCustomer extends AppCompatActivity {
         rdBtnOther=findViewById(R.id.rdBtnOther);
         btnAdd=findViewById(R.id.btnAdd);
         btnClear=findViewById(R.id.btnClear);
+
+        ActionBar mActionBar=getSupportActionBar();
+        mActionBar.hide();
+
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        //addDatePicker();
+
+
 
 
     }
