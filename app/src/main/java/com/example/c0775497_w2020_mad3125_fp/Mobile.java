@@ -15,5 +15,13 @@ public class Mobile extends Bill {
         this.mobNumber=mobNumber;
         this.mobGbUsed=mobGbUsed;
         this.minute=minute;
+        this.billTotal=billCalculation();
+    }
+
+    @Override
+    public Double billCalculation(){
+        double billAmount = 0.0;
+        billAmount = (this.mobGbUsed) * 20 + (this.minute) * 0.5;
+        return billAmount;
     }
 }
