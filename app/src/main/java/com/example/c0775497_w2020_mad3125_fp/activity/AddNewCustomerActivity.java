@@ -64,15 +64,14 @@ public class AddNewCustomerActivity extends AppCompatActivity {
             public void onClick(View v) {
                 fieldClear();
             }
-        })
-        addDatePicker();
+        });
     }
 
 
 
     private void fieldCheck() {
         boolean flag=false;
-        if(edtxtId.getText().toString().isEmpty());
+        if(edtxtId.getText().toString().isEmpty())
         {
             edtxtId.setError("enter customer Id");
             flag=true;

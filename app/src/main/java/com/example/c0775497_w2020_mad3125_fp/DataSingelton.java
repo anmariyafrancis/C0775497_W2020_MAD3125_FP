@@ -11,6 +11,6 @@ public class DataSingelton {
     private HashMap<String, Customer>customerMap=new HashMap<>();
     public HashMap getCustomerMap(){return this.customerMap;}
     public void populateData(){
-        Customer c1=new Customer();
+        Customer c1=new Customer("01","Anmariya","Francis","Female","anmariya@gmail.com","anmariya","an123","Scarborough","12/Apr/1996");
     }
 }
