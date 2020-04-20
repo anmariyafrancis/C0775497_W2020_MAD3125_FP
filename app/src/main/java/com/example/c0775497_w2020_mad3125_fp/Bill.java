@@ -18,4 +18,9 @@ public class Bill implements Serializable {
         this.billDate=billDate;
         this.billType=billType;
     }
+
+    public Double billCalculation(){
+        double sampleAmount=0.0;
+        return sampleAmount;
+    }
 }
