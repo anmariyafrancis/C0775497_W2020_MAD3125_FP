@@ -150,5 +150,31 @@ public class Customer implements Parcelable {
     public void setCustomerBills(HashMap<String, Bill> customerBills) {
         this.customerBills = customerBills;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(customerId);
+        dest.writeString(firstName);
+        dest.writeString(lastName);
+        dest.writeString(gender);
+        dest.writeString(email);
+        dest.writeString(userName);
+        dest.writeString(password);
+        dest.writeString(address);
+        dest.writeString(birthDate);
+        dest.writeMap(customerBills);
+        if (fullTotal == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeDouble(fullTotal);
+        }
+        dest.writeInt(customerImage);
+    }
 }
 
