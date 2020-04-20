@@ -191,7 +191,7 @@ public class Customer implements Parcelable {
         double fullTotalCustomers = 0.0d;
         for (Bill b : customerBills.values())
         {
-            fullTotalCustomers += b.fullTotal;
+            fullTotalCustomers += b.billTotal;
         }
         return fullTotalCustomers;
     }
