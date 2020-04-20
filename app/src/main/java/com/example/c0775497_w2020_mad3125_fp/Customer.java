@@ -4,7 +4,9 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.security.PublicKey;
+import java.util.ArrayList;
 import java.util.BitSet;
+import java.util.Collection;
 import java.util.HashMap;
 
 public class Customer implements Parcelable {
@@ -175,6 +177,23 @@ public class Customer implements Parcelable {
             dest.writeDouble(fullTotal);
         }
         dest.writeInt(customerImage);
+    }
+
+    public ArrayList<Bill> getBills()
+    {
+        Collection<Bill> tempBillValues = customerBills.values();
+        ArrayList<Bill> billsList = new ArrayList<>(tempBillValues);
+        return billsList;
+    }
+
+    public double getTotalAmount()
+    {
+        double fullTotalCustomers = 0.0d;
+        for (Bill b : customerBills.values())
+        {
+            fullTotalCustomers += b.fullTotal;
+        }
+        return fullTotalCustomers;
     }
 }
 
