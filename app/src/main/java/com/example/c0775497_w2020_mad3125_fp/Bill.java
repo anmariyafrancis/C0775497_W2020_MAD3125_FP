@@ -23,4 +23,36 @@ public class Bill implements Serializable {
         double sampleAmount=0.0;
         return sampleAmount;
     }
+
+    public String getBillId() {
+        return billId;
+    }
+
+    public void setBillId(String billId) {
+        this.billId = billId;
+    }
+
+    public String getBillDate() {
+        return billDate;
+    }
+
+    public void setBillDate(String billDate) {
+        this.billDate = billDate;
+    }
+
+    public BillType getBillType() {
+        return billType;
+    }
+
+    public void setBillType(BillType billType) {
+        this.billType = billType;
+    }
+
+    public Double getBillTotal() {
+        return billTotal;
+    }
+
+    public void setBillTotal(Double billTotal) {
+        this.billTotal = billTotal;
+    }
 }
