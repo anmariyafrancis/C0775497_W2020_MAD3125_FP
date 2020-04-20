@@ -1,4 +1,26 @@
 package com.example.c0775497_w2020_mad3125_fp;
 
-public class Hydro {
+public class Hydro extends Bill {
+    private String companyName;
+    private Integer unitsUsed;
+
+    public Hydro(String billId,String billDate,BillType billType,String companyName,Integer unitsUsed){
+        super(billId,billDate,billType);
+        this.companyName=companyName;
+        this.unitsUsed=unitsUsed;
+        this.billTotal=billCalculation();
+    }
+    @Override
+    public Double billCalculation(){
+        double billAmount = 0.0;
+        if (unitsUsed < 10)
+        {
+            billAmount = 1.5 * unitsUsed;
+        }
+        else
+        {
+            billAmount = 2 * unitsUsed;
+        }
+        return billAmount;
+    }
 }
