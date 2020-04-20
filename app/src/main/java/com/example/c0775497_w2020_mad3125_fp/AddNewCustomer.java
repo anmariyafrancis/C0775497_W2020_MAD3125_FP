@@ -17,5 +17,22 @@ public class AddNewCustomer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_customer);
+
+        edtxtId=findViewById(R.id.edtxtId);
+        edtxtFirstName=findViewById(R.id.edtxtFirstName);
+        edtxtLastName=findViewById(R.id.edtxtLastName);
+        edtxtBirth=findViewById(R.id.edtxtBirth);
+        edtxtUserName=findViewById(R.id.edtxtUserName);
+        edtxtEmail=findViewById(R.id.edtxtEmail);
+        edtxtUserName=findViewById(R.id.edtxtUserName);
+        edtxtPassword=findViewById(R.id.edtxtPassword);
+        edtxtAdress=findViewById(R.id.edtxtAddress);
+        rdBtnMale=findViewById(R.id.rdBtnMale);
+        rdBtnFemale=findViewById(R.id.rdBtnFemale);
+        rdBtnOther=findViewById(R.id.rdBtnOther);
+        btnAdd=findViewById(R.id.btnAdd);
+        btnClear=findViewById(R.id.btnClear);
+
+
     }
 }
