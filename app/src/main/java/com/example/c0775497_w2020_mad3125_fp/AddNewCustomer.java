@@ -4,6 +4,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -63,19 +64,7 @@ public class AddNewCustomer extends AppCompatActivity {
         addDatePicker();
     }
 
-    private void fieldClear() {
-        edtxtId.getText().clear();
-        edtxtFirstName.getText().clear();
-        edtxtLastName.getText().clear();
-        edtxtBirth.getText().clear();
-        edtxtEmail.getText().clear();
-        edtxtUserName.getText().clear();
-        edtxtPassword.getText().clear();
-        edtxtAdress.getText().clear();
-        rdBtnMale.setChecked(false);
-        rdBtnMale.setChecked(false);
-        rdBtnOther.setChecked(false);
-    }
+
 
     private void fieldCheck() {
         boolean flag=false;
@@ -125,7 +114,10 @@ public class AddNewCustomer extends AppCompatActivity {
         if(!flag){
             if(getGender().equals("Female")){
                 Customer customer=new Customer(edtxtId.getText().toString(),edtxtFirstName.getText().toString(),edtxtLastName.getText().toString(),getGender(),edtxtEmail.getText().toString(),edtxtUserName.getText().toString(),edtxtPassword.getText().toString(),edtxtAdress.getText().toString(),edtxtBirth.getText().toString());
-               DataSingelton.getInstance().getCustomerMap().put(Customer.getCustomerId)
+               DataSingelton.getInstance().getCustomerMap().put(Customer.getCustomerId(),customer);
+                Intent mIntent = new Intent(AddNewCustomer.this, CustomerListActivity.class);
+                mIntent.putExtra("Customer", customer);
+                startActivity(mIntent);
             }
         }
     }
@@ -142,6 +134,22 @@ public class AddNewCustomer extends AppCompatActivity {
         }
         return null;
     }
+
+    private void fieldClear() {
+        edtxtId.getText().clear();
+        edtxtFirstName.getText().clear();
+        edtxtLastName.getText().clear();
+        edtxtBirth.getText().clear();
+        edtxtEmail.getText().clear();
+        edtxtUserName.getText().clear();
+        edtxtPassword.getText().clear();
+        edtxtAdress.getText().clear();
+        rdBtnMale.setChecked(false);
+        rdBtnMale.setChecked(false);
+        rdBtnOther.setChecked(false);
+    }
+
+
 
 
     private void addDatePicker() {
