@@ -64,6 +64,17 @@ public class AddNewCustomer extends AppCompatActivity {
     }
 
     private void fieldClear() {
+        edtxtId.getText().clear();
+        edtxtFirstName.getText().clear();
+        edtxtLastName.getText().clear();
+        edtxtBirth.getText().clear();
+        edtxtEmail.getText().clear();
+        edtxtUserName.getText().clear();
+        edtxtPassword.getText().clear();
+        edtxtAdress.getText().clear();
+        rdBtnMale.setChecked(false);
+        rdBtnMale.setChecked(false);
+        rdBtnOther.setChecked(false);
     }
 
     private void fieldCheck() {
@@ -129,6 +140,7 @@ public class AddNewCustomer extends AppCompatActivity {
         else if(rdBtnOther.isChecked()){
             return "Other";
         }
+        return null;
     }
 
 
