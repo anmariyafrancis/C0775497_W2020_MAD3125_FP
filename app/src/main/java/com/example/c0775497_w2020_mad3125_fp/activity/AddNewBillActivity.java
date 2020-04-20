@@ -4,13 +4,18 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
 import com.example.c0775497_w2020_mad3125_fp.model.Customer;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+
+import java.util.ArrayList;
 
 public class AddNewBillActivity extends AppCompatActivity {
 
@@ -54,5 +59,30 @@ public class AddNewBillActivity extends AppCompatActivity {
         btnBillAdd = findViewById(R.id.btnBillAdd);
         btnBillClear = findViewById(R.id.btnBillClear);
 
+        Intent mIntent = getIntent();
+        custObj = mIntent.getParcelableExtra("CustomerBills2");
+
+        ArrayList<String> billType = new ArrayList<>();
+        billType.add("MOBILE");
+        billType.add("HYDRO");
+        billType.add("INTERNET");
+
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, billType);
+
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spnBillType.setAdapter(dataAdapter);
+
+        spnBillType.setOnItemSelectedListener(this);
+
+        btnBillClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clearfields();
+            }
+        });
+
+    }
+
+    private void clearfields() {
     }
 }

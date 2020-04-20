@@ -105,7 +105,6 @@ public class AddNewCustomerActivity extends AppCompatActivity {
             return;
         }
         if(edtxtPassword.getText().toString().isEmpty()){
-            edtxtPassword.setErrorEnabled(true);
             edtxtPassword.setError("enter password");
             flag=true;
             return;
@@ -118,7 +117,7 @@ public class AddNewCustomerActivity extends AppCompatActivity {
         if(!flag){
             if(getGender().equals("Female")){
                 Customer customer=new Customer(edtxtId.getText().toString(),edtxtFirstName.getText().toString(),edtxtLastName.getText().toString(),getGender(),edtxtEmail.getText().toString(),edtxtUserName.getText().toString(),edtxtPassword.getText().toString(),edtxtAdress.getText().toString(),edtxtBirth.getText().toString());
-               DataSingelton.getInstance().getCustomerMap().put(Customer.getCustomerId(),customer);
+                DataSingelton.getInstance().getCustomerMap().put(customer.getCustomerId(), customer);
                 Intent mIntent = new Intent(AddNewCustomerActivity.this, CustomerListActivity.class);
                 mIntent.putExtra("Customer", customer);
                 startActivity(mIntent);
@@ -156,7 +155,7 @@ public class AddNewCustomerActivity extends AppCompatActivity {
 
 
 
-    private void addDatePicker() {
+    /*private void addDatePicker() {
         edtxtBirth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -187,7 +186,7 @@ public class AddNewCustomerActivity extends AppCompatActivity {
                 edtxtBirth.setText(date);
             }
         };
-    }
+    }*/
     public static String getMonthName(int monthNumber) {
         String[] monthNames = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"};
         return monthNames[monthNumber - 1];
