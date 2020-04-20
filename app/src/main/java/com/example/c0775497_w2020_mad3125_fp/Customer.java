@@ -1,5 +1,6 @@
 package com.example.c0775497_w2020_mad3125_fp;
 
+import java.util.BitSet;
 import java.util.HashMap;
 
 public class Customer {
@@ -15,5 +16,6 @@ public class Customer {
     private String birthDate;
     private Double fullTotal;
     private int customerImage;
+    private HashMap<String, Bill>
 
 }
