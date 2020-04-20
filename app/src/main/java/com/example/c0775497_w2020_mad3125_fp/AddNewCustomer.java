@@ -111,7 +111,26 @@ public class AddNewCustomer extends AppCompatActivity {
             flag=true;
             return;
         }
+        if(!flag){
+            if(getGender().equals("Female")){
+                Customer customer=new Customer(edtxtId.getText().toString(),edtxtFirstName.getText().toString(),edtxtLastName.getText().toString(),getGender(),edtxtEmail.getText().toString(),edtxtUserName.getText().toString(),edtxtPassword.getText().toString(),edtxtAdress.getText().toString(),edtxtBirth.getText().toString());
+               DataSingelton.getInstance().getCustomerMap().put(Customer.getCustomerId)
+            }
+        }
     }
+
+    public String getGender() {
+        if (rdBtnMale.isChecked()){
+            return "Male";
+        }
+        else if (rdBtnFemale.isChecked()){
+            return "Female";
+        }
+        else if(rdBtnOther.isChecked()){
+            return "Other";
+        }
+    }
+
 
     private void addDatePicker() {
         edtxtBirth.setOnClickListener(new View.OnClickListener() {
