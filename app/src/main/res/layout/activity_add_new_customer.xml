@@ -170,7 +170,7 @@
         android:id="@+id/btnAdd"
         android:layout_width="108dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="85dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginStart="74dp"
         android:layout_marginTop="38dp"
         android:background="#0B0A0A"
@@ -187,7 +187,7 @@
         android:layout_width="106dp"
         android:layout_height="46dp"
         android:layout_marginEnd="66dp"
-        android:layout_marginStart="47dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="38dp"
         android:background="#0B0A0A"
         android:text="CLEAR"
@@ -198,4 +198,5 @@
         app:layout_constraintStart_toEndOf="@+id/btnAdd"
         app:layout_constraintTop_toBottomOf="@+id/edtxtAddress" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
