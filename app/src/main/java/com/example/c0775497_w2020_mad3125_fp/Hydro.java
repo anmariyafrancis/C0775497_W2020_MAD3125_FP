@@ -15,11 +15,11 @@ public class Hydro extends Bill {
         double billAmount = 0.0;
         if (unitsUsed < 10)
         {
-            billAmount = 1.5 * unitsUsed;
+            billAmount = 2 * unitsUsed;
         }
         else
         {
-            billAmount = 2 * unitsUsed;
+            billAmount = 3 * unitsUsed;
         }
         return billAmount;
     }
