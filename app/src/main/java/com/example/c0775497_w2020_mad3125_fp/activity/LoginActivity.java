@@ -17,61 +17,62 @@ import com.example.c0775497_w2020_mad3125_fp.R;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     private String emailId,password;
-    private Button login;
-    private EditText txtEmail,txtPassword;
-    private CheckBox checkRemember;
-    private Boolean rememberMe;
+    private Button ok;
+    private EditText edtxtEmailId,edtxtPassword;
+    private CheckBox rememberMe;
     private SharedPreferences loginPreferences;
-    private SharedPreferences.Editor loginPrefEditor;
+    private SharedPreferences.Editor loginPrefsEditor;
+    private Boolean saveLogin;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        login= (Button)findViewById(R.id.btnLogin);
-        login.setOnClickListener(this);
-        txtEmail=(EditText)findViewById(R.id.txtEmail);
-        txtPassword=(EditText)findViewById(R.id.txtPassword);
-        checkRemember=(CheckBox)findViewById(R.id.checkRemember);
-        loginPreferences=getSharedPreferences("loginPref",MODE_PRIVATE);
-        loginPrefEditor=loginPreferences.edit();
-        rememberMe=loginPreferences.getBoolean("rememberMe",false);
+        ok = (Button)findViewById(R.id.btnLogin);
+        ok.setOnClickListener(this);
+        edtxtEmailId = (EditText)findViewById(R.id.txtEmail);
+        edtxtPassword = (EditText)findViewById(R.id.txtPassword);
+        rememberMe = (CheckBox)findViewById(R.id.checkRemember);
+        loginPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
+        loginPrefsEditor = loginPreferences.edit();
 
-        if(rememberMe==true){
-            txtEmail.setText(loginPreferences.getString("emailId",""));
-            txtPassword.setText(loginPreferences.getString("password",""));
-            checkRemember.setChecked(true);
+        saveLogin = loginPreferences.getBoolean("saveLogin", false);
+        if (saveLogin == true) {
+            edtxtEmailId.setText(loginPreferences.getString("username", ""));
+            edtxtPassword.setText(loginPreferences.getString("password", ""));
+            rememberMe.setChecked(true);
         }
+
     }
-    public void onClick(View v) {
-        if (v==login){
-            InputMethodManager im=(InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-            im.hideSoftInputFromWindow(txtEmail.getWindowToken(),0);
-            emailId=txtEmail.getText().toString();
-            password=txtPassword.getText().toString();
-            if(checkRemember.isChecked()){
-                loginPrefEditor.putBoolean("rememberMe",true);
-                loginPrefEditor.putString("emailId",emailId);
-                loginPrefEditor.putString("password",password);
-                loginPrefEditor.commit();
-            }
-            else {
-                loginPrefEditor.clear();
-                loginPrefEditor.commit();
+    public void onClick(View view) {
+        if (view == ok) {
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(edtxtEmailId.getWindowToken(), 0);
+
+            emailId = edtxtEmailId.getText().toString();
+            password = edtxtPassword.getText().toString();
+
+            if (rememberMe.isChecked())
+            {
+                loginPrefsEditor.putBoolean("saveLogin", true);
+                loginPrefsEditor.putString("anmariya@gmail.com", emailId);
+                loginPrefsEditor.putString("an123", password);
+                loginPrefsEditor.commit();
+
+            } else
+            {
+                loginPrefsEditor.clear();
+                loginPrefsEditor.commit();
+
             }
             goNext();
         }
-
     }
-
-    private void goNext() {
-        if(txtEmail.getText().toString().equals("anmariya@gmail.com")&&(txtPassword.getText().toString().equals("an123"))){
-        startActivity(new Intent(LoginActivity.this, CustomerListActivity.class));
-        LoginActivity.this.finish();
-    }
-    else{
-
+    public void goNext() {
+        if (edtxtEmailId.getText().toString().equals("anmariya@gmail.com") && (edtxtPassword.getText().toString().equals("an123"))) {
+            startActivity(new Intent(LoginActivity.this, CustomerListActivity.class));
+            LoginActivity.this.finish();
         }
 
     }

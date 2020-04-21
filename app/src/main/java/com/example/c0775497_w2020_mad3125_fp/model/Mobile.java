@@ -1,7 +1,5 @@
 package com.example.c0775497_w2020_mad3125_fp.model;
 
-import com.example.c0775497_w2020_mad3125_fp.model.Bill;
-
 public class Mobile extends Bill {
     private String manufacturerName;
     private String planDetails;
@@ -21,7 +19,7 @@ public class Mobile extends Bill {
     }
 
     @Override
-    public Double billCalculation(){
+    public double billCalculation(){
         double billAmount = 0.0;
         billAmount = (this.mobGbUsed) * 20 + (this.minute) * 0.5;
         return billAmount;

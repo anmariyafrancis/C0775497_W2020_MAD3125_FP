@@ -19,7 +19,7 @@ public abstract class Bill implements Serializable {
         this.billType=billType;
     }
 
-    public Double billCalculation(){
+    public double billCalculation(){
         double sampleAmount=0.0;
         return sampleAmount;
     }

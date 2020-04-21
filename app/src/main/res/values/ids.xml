@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="btnLogout" type="id" />
+    <item name="txt_customer_name" type="id" />
+    <item name="txt_customer_id" type="id" />
+    <item name="txt_customer_email" type="id" />
+    <item name="txt_customer_gender" type="id" />
+    <item name="txt_customer_dob" type="id" />
+    <item name="txt_customer_location" type="id" />
+    <item name="img_customer" type="id" />
+    <item name="rv_customer_list" type="id" />
+    <item name="buttonAdd" type="id" />
 </resources>

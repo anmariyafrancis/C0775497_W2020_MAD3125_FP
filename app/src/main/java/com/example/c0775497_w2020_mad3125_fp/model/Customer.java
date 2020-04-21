@@ -45,8 +45,11 @@ public class Customer implements Parcelable {
         @Override
         public Customer[] newArray(int size){return new Customer[size];}
     };
+
+
     public int getCustomerImage(){return customerImage;}
-    public Customer(String customerId, String firstName, String lastName, String gender, String email, String userName, String password, String address, String birthDate){
+
+    public Customer(String customerId, String firstName, String lastName, String gender, String email, String userName, String password, String address, String birthDate,Integer customerImage){
     this.customerId=customerId;
     this.firstName=firstName;
     this.lastName=lastName;

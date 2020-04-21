@@ -15,7 +15,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 
 import com.example.c0775497_w2020_mad3125_fp.model.Customer;
-import com.example.c0775497_w2020_mad3125_fp.DataSingelton;
+import com.example.c0775497_w2020_mad3125_fp.DataSingleton;
 import com.example.c0775497_w2020_mad3125_fp.R;
 
 import java.util.Calendar;
@@ -112,15 +112,6 @@ public class AddNewCustomerActivity extends AppCompatActivity {
             edtxtAdress.setError("enter address");
             flag=true;
             return;
-        }
-        if(!flag){
-            if(getGender().equals("Female")){
-                Customer customer=new Customer(edtxtId.getText().toString(),edtxtFirstName.getText().toString(),edtxtLastName.getText().toString(),getGender(),edtxtEmail.getText().toString(),edtxtUserName.getText().toString(),edtxtPassword.getText().toString(),edtxtAdress.getText().toString(),edtxtBirth.getText().toString());
-                DataSingelton.getInstance().getCustomerMap().put(customer.getCustomerId(), customer);
-                Intent mIntent = new Intent(AddNewCustomerActivity.this, CustomerListActivity.class);
-                mIntent.putExtra("Customer", customer);
-                startActivity(mIntent);
-            }
         }
     }
 

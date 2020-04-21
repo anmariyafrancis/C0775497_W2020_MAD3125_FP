@@ -1,7 +1,5 @@
 package com.example.c0775497_w2020_mad3125_fp.model;
 
-import com.example.c0775497_w2020_mad3125_fp.model.Bill;
-
 public class Internet extends Bill {
     private String providerName;
     private Double gbUsed;
@@ -14,7 +12,7 @@ public class Internet extends Bill {
     }
 
     @Override
-    public Double billCalculation(){
+    public double billCalculation(){
         double billAmount = 0.0;
         if( gbUsed < 10){
             billAmount = 2 * gbUsed;

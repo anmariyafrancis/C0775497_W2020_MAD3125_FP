@@ -1,7 +1,5 @@
 package com.example.c0775497_w2020_mad3125_fp.model;
 
-import com.example.c0775497_w2020_mad3125_fp.model.Bill;
-
 public class Hydro extends Bill {
     private String companyName;
     private Integer unitsUsed;
@@ -13,7 +11,7 @@ public class Hydro extends Bill {
         this.billTotal=billCalculation();
     }
     @Override
-    public Double billCalculation(){
+    public double billCalculation(){
         double billAmount = 0.0;
         if (unitsUsed < 10)
         {
